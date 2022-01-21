@@ -1,0 +1,28 @@
+<div>
+  <div class="mt-3">
+    <div class="mx-5">
+      <h1>All our flats (<%= @flats.count %>)</h1>
+      <div class="row">
+      <% @flats.each do |flat| %>
+
+        <div class="card me-5" style="width: 18rem;">
+        <img src="http://unsplash.it/300/150?random&gravity=center" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><%= flat.name %></h5>
+          <p class="card-text"><%= flat.address %></p>
+          <div class="d-flex">
+          <p><i class="fas fa-user-friends"></i> <%= flat.number_of_guests %></p>
+          <p class="px-2"><i class="fas fa-euro-sign"></i> <%= flat.price_per_night %></p>
+          </div>
+            <div>
+              <a href="#" class="card-link">More info</a>
+              <a href="#" class="card-link">Edit</a>
+              <a href="#" class="card-link">Remove</a>
+            </div>
+        </div>
+      </div>
+      <% end %>
+      </div>
+    </div>
+  </div>
+</div>

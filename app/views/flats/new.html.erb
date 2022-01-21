@@ -1,0 +1,15 @@
+<div>
+  <div class="bg-light p-3" style="width:500px;">
+  <h1>Add a flat ➕</h1>
+  <div>
+    <%= simple_form_for [@flat] do |f| %>
+      <%= f.input :name %>
+      <%= f.input :address %>
+      <%= f.input :description %>
+      <%= f.input :price_per_night %>
+      <%= f.input :number_of_guests %>
+      <%= f.submit "Create flat", class: "btn btn-primary rounded-3" %>
+    <% end %>
+    </div>
+  </div>
+</div>
